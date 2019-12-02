@@ -12,7 +12,7 @@ object Puzzle1 {
 
         @JvmStatic
         fun main(args : Array<String>) {
-                val input = Puzzle1::class.java.getResource("input.txt").readText().split('\n').filter { it.isNotEmpty() }.map { it.toInt() }
+                val input = Puzzle1::class.java.getResource("puzzle1.txt").readText().split('\n').filter { it.isNotEmpty() }.map { it.toInt() }
                 val result = input.fold(0) {acc, mass ->
                         val fuel = calculateFuel(mass)
                         acc + fuel }
